@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-
+#push test
 
 def home(requests):
     #return our html templates
