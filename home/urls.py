@@ -15,10 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from . import views
 
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('', include('home.urls')),
+#
+# ]
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('home.urls')),
-    path('django_plotly_dash/', include('django_plotly_dash.urls'))
-
-]
+    #call the url home
+    #point at the views.py file in our home folder
+    path('', views.home, name='home'),
+    path('bitcoin/', views.bitcoin, name='bitcoin'),
+    ]
