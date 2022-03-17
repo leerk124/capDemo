@@ -1,9 +1,9 @@
 from django.shortcuts import render
+import PlotlyTest
 
 # Create your views here.
-#push test
+# push test
 
 def home(requests):
-    #return our html templates
-    #(in order for it to show up we need to go to settings => installed apps)
-    return render(requests, 'home/welcome.html')
+    graph = PlotlyTest.main('bitcoin')
+    return render(requests, 'home/welcome.html', graph)
