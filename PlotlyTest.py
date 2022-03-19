@@ -4,7 +4,8 @@ import plotly.express as pltly
 import plotly.offline
 import os
 
-# TODO: This may end up being called in views so views can grab the graph and pass it to the front end
+# TODO: Possibly want to reuse the graphs method by creating a list of the graphs' html to return to views to print
+#       multiple graphs at once
 
 
 def findTableNeeded(TEST, jank_hash_table):
@@ -32,9 +33,6 @@ def graphs(data_frame_needed):
                                                                 low=data_frame_needed['low'],
                                                                 close=data_frame_needed['close'])])
 
-    # Printing the graphs created above
-    # figure.show()
-    # lineGraph.show()
     return figure.to_html(full_html=False, default_height=500, default_width=700)
 
 
