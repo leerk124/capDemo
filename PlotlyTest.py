@@ -1,6 +1,7 @@
 import DatabaseQuery as DBQ
 import plotly.graph_objects as graph_object
 import plotly.express as pltly
+import plotly.offline
 import os
 
 # TODO: This may end up being called in views so views can grab the graph and pass it to the front end
@@ -33,8 +34,8 @@ def graphs(data_frame_needed):
 
     # Printing the graphs created above
     # figure.show()
-    lineGraph.show()
-    return figure.show()
+    # lineGraph.show()
+    return figure.to_html(full_html=False, default_height=500, default_width=700)
 
 
 def main(coin):
@@ -50,8 +51,8 @@ def main(coin):
     # TEST = input("Enter the coin you'd like to see")
     data_frame_needed = findTableNeeded(coin, jank_hash_table)
 
-    graphs(data_frame_needed)
+    return graphs(data_frame_needed)
 
 
-
+# main('bitcoin')
 

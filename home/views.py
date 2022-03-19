@@ -5,9 +5,10 @@ import PlotlyTest
 # Create your views here.
 
 def home(requests):
-    # graph = PlotlyTest.main('bitcoin')
-    return render(requests, 'home/welcome.html', PlotlyTest.main('bitcoin'))
+    return render(requests, 'home/welcome.html')
 
 
 def bitcoin(requests):
-    return render(requests,'home/bitcoin.html')
+    divTEST = PlotlyTest.main('bitcoin')
+    context = {'graph': divTEST}
+    return render(requests, 'home/bitcoin.html', context)
