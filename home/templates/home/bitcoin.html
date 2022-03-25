@@ -2,8 +2,9 @@
 {% load static %}
 {% block content %}
 <h1>Bitcoin Page</h1>
-{% if graph %}
-    {{ graph|safe }}
+{% if candleStick_Graph %}
+    {{ candleStick_Graph|safe }}
+    {{ volume|safe }}
     {% else %}
     <p>No graph here</p>
     {% endif %}

@@ -18,22 +18,28 @@ def findTableNeeded(coin, jank_hash_table):
 
 
 def graphs(data_frame_needed):
-
-    # Simple line graph
-    lineGraph = pltly.line(data_frame_needed,
-                           x='date', y=['high', 'low'],
-                           title='Bitcoin High and Low Price',
-                           labels={'x': 'Date', 'y': 'High and Low'},
-                           )
-
+    graph_html_list = []
     # Candlestick Graph
-    figure = graph_object.Figure(data=[graph_object.Candlestick(x=data_frame_needed['date'],
-                                                                open=data_frame_needed['open'],
-                                                                high=data_frame_needed['high'],
-                                                                low=data_frame_needed['low'],
-                                                                close=data_frame_needed['close'])])
+    candleStick_graph = graph_object.Figure(data=[graph_object.Candlestick(x=data_frame_needed['date'],
+                                                                           open=data_frame_needed['open'],
+                                                                           high=data_frame_needed['high'],
+                                                                           low=data_frame_needed['low'],
+                                                                           close=data_frame_needed['close'])])
+    # Volume Histogram
+    volume_graph = pltly.histogram(data_frame_needed,
+                                   x = 'date', y='volume',
+                                   title='Volume of Coin',
+                                   labels={'x': 'Date', 'y': 'Volume'})
 
-    return figure.to_html(full_html=False, default_height=500, default_width=700)
+    # Updating plots here
+    candleStick_graph.update_layout(plot_bgcolor='black')
+    volume_graph.update_layout(plot_bgcolor='black')
+
+
+    graph_html_list.append(volume_graph.to_html(full_html=False, default_height=500, default_width=500))
+    graph_html_list.append(candleStick_graph.to_html(full_html=False, default_height=500, default_width=700))
+    volume_graph.show()
+    return graph_html_list
 
 
 def main(coin):
