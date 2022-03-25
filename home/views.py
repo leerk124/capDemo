@@ -7,9 +7,11 @@ import PlotlyTest
 def home(requests):
     return render(requests, 'home/welcome.html')
 
+
 def bitcoin(requests):
-    divTEST = PlotlyTest.main('bitcoin')
-    context = {'graph': divTEST}
+    graph_html_list = PlotlyTest.main('bitcoin')
+    context = {'candleStick_Graph': graph_html_list[0],
+               'volume': graph_html_list[1]}
     return render(requests, 'home/bitcoin.html', context)
 
 def cardano(requests):
