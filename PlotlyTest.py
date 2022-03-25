@@ -38,7 +38,6 @@ def graphs(data_frame_needed):
 
     graph_html_list.append(volume_graph.to_html(full_html=False, default_height=500, default_width=500))
     graph_html_list.append(candleStick_graph.to_html(full_html=False, default_height=500, default_width=700))
-    volume_graph.show()
     return graph_html_list
 
 
