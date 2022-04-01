@@ -1,0 +1,14 @@
+{% extends 'bitcoin.html' %}
+{% load static %}
+{% block content %}
+<h1>Bitcoin Page</h1>
+<br>
+
+{{value|linebreaksbr}}
+{% if candleStick_Graph %}
+    {{ candleStick_Graph|safe }}
+    {{ volume|safe }}
+    {% else %}
+    <p>No graph here</p>
+    {% endif %}
+{% endblock %}

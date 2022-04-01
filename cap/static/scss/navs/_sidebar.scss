@@ -458,20 +458,20 @@
 
     // Color the sidebar toggler
     #sidebarToggle {
-        background-color: fade-out($white, 0.8);
+        background-color: fade-out(#162e57, 0.8);
 
         &::after {
-            color: fade-out($white, 0.5);
+            color: fade-out(#162e57, 0.5);
         }
 
         &:hover {
-            background-color: fade-out($white, 0.75);
+            background-color: fade-out(#162e57, 0.75);
         }
     }
 
     &.toggled {
         #sidebarToggle::after {
-            color: fade-out($white, 0.5);
+            color: fade-out(#162e57, 0.5);
         }
     }
 }
