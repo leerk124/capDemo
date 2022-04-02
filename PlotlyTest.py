@@ -25,6 +25,8 @@ def graphs(data_frame_needed):
                                                                            high=data_frame_needed['high'],
                                                                            low=data_frame_needed['low'],
                                                                            close=data_frame_needed['close'])])
+
+
     # Volume Histogram
     volume_graph = pltly.histogram(data_frame_needed,
                                    x = 'date', y='volume',
@@ -39,6 +41,7 @@ def graphs(data_frame_needed):
 
     graph_html_list.append(volume_graph.to_html(full_html=False, default_height=500, default_width=500))
     graph_html_list.append(candleStick_graph.to_html(full_html=False, default_height=500, default_width=700))
+
     return graph_html_list
 
 
