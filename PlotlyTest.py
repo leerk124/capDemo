@@ -25,6 +25,8 @@ def graphs(data_frame_needed):
                                                                            high=data_frame_needed['high'],
                                                                            low=data_frame_needed['low'],
                                                                            close=data_frame_needed['close'])])
+
+
     # Volume Histogram
     volume_graph = pltly.histogram(data_frame_needed,
                                    x = 'date', y='volume',
