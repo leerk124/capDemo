@@ -69,13 +69,13 @@
                     padding: 0.5rem 1rem;
                     margin: 0 0.5rem;
                     display: block;
-                    color: $gray-900;
+                    color: $gray-600;
                     text-decoration: none;
                     border-radius: $border-radius;
                     white-space: nowrap;
 
                     &:hover {
-                        background-color: $gray-200;
+                        background-color: #395685;
                     }
 
                     &:active {
@@ -458,20 +458,20 @@
 
     // Color the sidebar toggler
     #sidebarToggle {
-        background-color: fade-out($white, 0.8);
+        background-color: fade-out(#162e57, 0.8);
 
         &::after {
-            color: fade-out($white, 0.5);
+            color: fade-out(#162e57, 0.5);
         }
 
         &:hover {
-            background-color: fade-out($white, 0.75);
+            background-color: fade-out(#162e57, 0.75);
         }
     }
 
     &.toggled {
         #sidebarToggle::after {
-            color: fade-out($white, 0.5);
+            color: fade-out(#162e57, 0.5);
         }
     }
 }
