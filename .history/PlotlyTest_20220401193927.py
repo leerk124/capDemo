@@ -34,7 +34,7 @@ def graphs(data_frame_needed):
     # Updating plots here
     # candleStick_graph.update_layout(plot_bgcolor='black')
     candleStick_graph.update_layout(template='plotly_dark')
-    volume_graph.update_layout(template='plotly_dark')
+    volume_graph.update_layout(plot_bgcolor='black')
 
 
     graph_html_list.append(volume_graph.to_html(full_html=False, default_height=500, default_width=500))

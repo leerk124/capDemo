@@ -49,7 +49,31 @@
                         <h1>Home Page</h1>
                         <br>
                         <p>Hello, I'm testing this page. Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah</p>
-                        
+                        <section class="colored-section" id="testimonials">
+                            <div id="testimonial-carousel" class="carousel slide" data-bs-ride="carousel" >
+                            <div class="carousel-inner">
+                                <div class="carousel-item active container-fluid"> <!--one of these classes must be marked as 'active'-->
+                                <h2 class="testimonial-text">I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+                                <img class="testimonial-image" src="images/dog-img.jpg" alt="dog-profile">
+                                <em>Pebbles, New York</em>
+                                </div>
+                                <div class="carousel-item container-fluid">
+                                <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life.
+                                I think.</h2>
+                                <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
+                                <em>Beverly, Illinois</em>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span> <!--aria hidden means make the screen reader skip over this-->
+                                <span class="visually-hidden">Previous</span> <!-- tells screen reader "PREVIOUS" instead of "carousel-control-prev-icon"-->
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            </div>
+                        </section>
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800"> </h1>
