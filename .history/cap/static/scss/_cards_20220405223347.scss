@@ -1,0 +1,134 @@
+// Custom Card Styling
+
+// .card {
+//   .card-header {
+//     // Format Dropdowns in Card Headings
+//     .dropdown {
+//       line-height: 1;
+//       .dropdown-menu {
+//         line-height: 1.5;
+//       }
+//     }
+//   }
+//   // Collapsable Card Styling
+//   .card-header[data-toggle="collapse"] {
+//     text-decoration: none;
+//     position: relative;
+//     padding: 0.75rem 3.25rem 0.75rem 1.25rem;
+//     &::after {
+//       position: absolute;
+//       right: 0;
+//       top: 0;
+//       padding-right: 1.725rem;
+//       line-height: 51px;
+//       font-weight: 900;
+//       content: '\f107';
+//       font-family: 'Font Awesome 5 Free';
+//       color: $gray-400;
+//     }
+//     &.collapsed {
+//       border-radius: $card-border-radius;
+//       &::after {
+//         content: '\f105';
+//       }
+//     }
+//   }
+// }
+
+
+body {
+  background-color: #111111;
+}
+
+.wrapper {
+  margin: 10vh
+}
+
+//post card styles
+
+.card {
+  border: none;
+  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  overflow: hidden;
+  border-radius: 20px;
+  min-height: 450px;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 768px) {
+    min-height: 350px;
+  }
+
+  @media (max-width: 420px) {
+    min-height: 300px;
+  }
+
+  &.card-has-bg {
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: inherit;
+      -webkit-filter: grayscale(1);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+
+    &:hover {
+      transform: scale(0.98);
+      box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.3);
+      background-size: 130%;
+      transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+
+      .card-img-overlay {
+        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+        background: rgb(35, 79, 109);
+        background: linear-gradient(0deg, rgba(4, 69, 114, 0.5) 0%, rgba(4, 69, 114, 1) 100%);
+      }
+    }
+  }
+
+  .card-footer {
+    background: none;
+    border-top: none;
+
+    .media {
+      img {
+        border: solid 3px #111111;
+      }
+    }
+  }
+
+  .card-meta {
+    color: $gray-200
+  }
+
+  .card-body {
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  &:hover {
+    .card-body {
+      margin-top: 30px;
+      transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    cursor: pointer;
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .card-img-overlay {
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+    background: rgb(35, 79, 109);
+    background: linear-gradient(0deg, #1f5401 0%, rgba(69, 95, 113, 1) 100%);
+  }
+}
