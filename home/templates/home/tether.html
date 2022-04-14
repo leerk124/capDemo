@@ -1,4 +1,13 @@
 {% extends 'tether.html' %}
 {% load static %}
 {% block content %}
+
+{{value|linebreaksbr}}
+{% if candleStick_Graph %}
+    {{ candleStick_Graph|safe }}
+    {{ volume|safe }}
+    {% else %}
+    <p>No graph here</p>
+    {% endif %}
+
 {% endblock %}
