@@ -32,7 +32,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        {% include 'partialsHelium/_sidebar.html' %}
+        {% include 'partialsCardano/_sidebar.html' %}
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -42,26 +42,28 @@
             <div id="content">
 
                 <!-- Topbar -->
-                {% include 'partialsHelium/_topbar.html' %}
+                {% include 'partialsCardano/_topbar.html' %}
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h2 class = "heliumHeader" color="text">
-                        <img src="\static\img\heliumColor.png" alt="logo" width="30" height="33"> 
-                        Helium
-                        <span style="font-size: 13px;"> HNT</span>
+                    <h2 class = "cardanoHeader" color="text">
+                        <img src="\static\img\cardanoColor.png" alt="logo" width="30" height="33"> 
+                        Cardano
+                        <span style="font-size: 13px;"> ADA</span>
                     </h2>
                     <!-- Page Heading -->
-                    <center>
+                    
+                        <center>
                         {%block content%}
                         {% endblock %}
-                    </center>
+                        </center>
+                    
                 </div>
                 <!-- End of Main Content -->
 
                 <!-- Footer -->
-                    {% include 'partialsHelium/_footer.html' %}
+                    {% include 'partialsCardano/_footer.html' %}
                 <!-- End of Footer -->
 
             </div>

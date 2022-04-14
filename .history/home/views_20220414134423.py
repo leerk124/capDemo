@@ -40,32 +40,32 @@ def helium(requests):
     graph_html_list = PlotlyTest.main('helium')
     context = {'candleStick_Graph': graph_html_list[0],
                'volume': graph_html_list[1]}
-    return render(requests, 'home/helium.html', context)
+    return render(requests, 'home/ethereum.html', context)
 
 
 def litecoin(requests):
     graph_html_list = PlotlyTest.main('litecoin')
     context = {'candleStick_Graph': graph_html_list[0],
                'volume': graph_html_list[1]}
-    return render(requests, 'home/litecoin.html', context)
+    return render(requests, 'home/ethereum.html', context)
 
 
 def polkadot(requests):
     graph_html_list = PlotlyTest.main('polkadot')
     context = {'candleStick_Graph': graph_html_list[0],
                'volume': graph_html_list[1]}
-    return render(requests, 'home/polkadot.html', context)
+    return render(requests, 'home/ethereum.html', context)
 
 
 def shibainu(requests):
     graph_html_list = PlotlyTest.main('shibainu')
     context = {'candleStick_Graph': graph_html_list[0],
                'volume': graph_html_list[1]}
-    return render(requests, 'home/shibainu.html', context)
+    return render(requests, 'home/ethereum.html', context)
 
 
 def tether(requests):
     graph_html_list = PlotlyTest.main('tether')
     context = {'candleStick_Graph': graph_html_list[0],
                'volume': graph_html_list[1]}
-    return render(requests, 'home/tether.html', context)
+    return render(requests, 'home/ethereum.html', context)

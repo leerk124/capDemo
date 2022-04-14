@@ -32,7 +32,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        {% include 'partialsHelium/_sidebar.html' %}
+        {% include 'partialsEthereum/_sidebar.html' %}
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -42,17 +42,18 @@
             <div id="content">
 
                 <!-- Topbar -->
-                {% include 'partialsHelium/_topbar.html' %}
+                {% include 'partialsEthereum/_topbar.html' %}
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h2 class = "heliumHeader" color="text">
-                        <img src="\static\img\heliumColor.png" alt="logo" width="30" height="33"> 
-                        Helium
-                        <span style="font-size: 13px;"> HNT</span>
+                    <h2 class = "ethereumHeader" color="text">
+                        <!--CHANGE THIS TO BLACK LOGO ROBIN BC ITS ETHEREUM CLASSIC RN-->
+                        <img src="\static\img\ethereumBlack.png" alt="logo" width="30" height="40"> 
+                        Ethereum
+                        <span style="font-size: 13px;"> ETH</span>
                     </h2>
-                    <!-- Page Heading -->
+                <!-- Page Heading -->
                     <center>
                         {%block content%}
                         {% endblock %}
@@ -61,7 +62,7 @@
                 <!-- End of Main Content -->
 
                 <!-- Footer -->
-                    {% include 'partialsHelium/_footer.html' %}
+                    {% include 'partialsEthereum/_footer.html' %}
                 <!-- End of Footer -->
 
             </div>

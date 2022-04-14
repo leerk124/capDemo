@@ -32,7 +32,14 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        {% include 'partialsHelium/_sidebar.html' %}
+        {% include 'partialsEthereum/_sidebar.html' %}
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+       <div id="wrapper">
+
+        <!-- Sidebar -->
+        {% include 'partialsDoge/_sidebar.html' %}
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -42,26 +49,38 @@
             <div id="content">
 
                 <!-- Topbar -->
-                {% include 'partialsHelium/_topbar.html' %}
+                {% include 'partialsDoge/_topbar.html' %}
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h2 class = "heliumHeader" color="text">
-                        <img src="\static\img\heliumColor.png" alt="logo" width="30" height="33"> 
-                        Helium
-                        <span style="font-size: 13px;"> HNT</span>
+                    <h2 class = "dogeHeader" color="text">
+                        <img src="\static\img\dogeColor.png" alt="logo" width="30" height="33"> 
+                        Dogecoin
+                        <span style="font-size: 13px;"> DOGE</span>
                     </h2>
+
                     <!-- Page Heading -->
-                    <center>
+                    <div class="row">
                         {%block content%}
+
                         {% endblock %}
-                    </center>
+                    </div>
                 </div>
                 <!-- End of Main Content -->
 
                 <!-- Footer -->
-                    {% include 'partialsHelium/_footer.html' %}
+                    {% include 'partialsDoge/_footer.html' %}
+                <!-- End of Footer -->
+
+            </div>
+            <!-- End of Content Wrapper -->
+
+        </div>
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                    {% include 'partialsEthereum/_footer.html' %}
                 <!-- End of Footer -->
 
             </div>
