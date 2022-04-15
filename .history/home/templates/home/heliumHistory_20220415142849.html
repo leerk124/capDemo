@@ -1,0 +1,12 @@
+{% extends 'heliumHistory.html' %}
+{% load static %}
+{% block content %}
+
+{% if candleStick_Graph %}
+    {{ candleStick_Graph|safe }}
+    {{ volume|safe }}
+    {% else %}
+    <p>No graph here</p>
+    {% endif %}
+
+{% endblock %}
