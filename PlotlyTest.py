@@ -1,11 +1,7 @@
 import DatabaseQuery as DBQ
 import plotly.graph_objects as graph_object
 import plotly.express as pltly
-import plotly.offline
-import os
 
-# TODO: Possibly want to reuse the graphs method by creating a list of the graphs' html to return to views to print
-#       multiple graphs at once
 
 
 def findTableNeeded(coin, jank_hash_table):
@@ -50,10 +46,10 @@ def main(coin):
     database = DBQ.ReadData('db.sqlite3')
 
     # Storing data frames
-    jank_hash_table = DBQ.ReadData.query(database)
+    jank_hash_table = database.query()
 
     # Closing database
-    DBQ.ReadData.close_database(database)
+    database.close_database()
 
     # TEST = input("Enter the coin you'd like to see")
     data_frame_needed = findTableNeeded(coin, jank_hash_table)
