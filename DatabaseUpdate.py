@@ -25,7 +25,7 @@ def main():
 
     database.updateDatabase(data_to_add_list)
     database.close_database()  # Close database connection after we're done
-    pushToGitHub()
+    # pushToGitHub()
 
 # Downloading the CSV for each coin to insert into database
 def downloadCSV(coin_list):
