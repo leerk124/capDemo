@@ -1,8 +1,6 @@
 from selenium.webdriver.common.by import By
 import pandas
 import DatabaseQuery as DBQ
-import sqlite3
-import socket
 from selenium import webdriver
 import time
 import os
@@ -27,7 +25,7 @@ def main():
 
     database.updateDatabase(data_to_add_list)
     database.close_database()  # Close database connection after we're done
-
+    pushToGitHub()
 
 # Downloading the CSV for each coin to insert into database
 def downloadCSV(coin_list):
@@ -41,6 +39,7 @@ def downloadCSV(coin_list):
         # time.sleep(10)
 
 
+# Storing the new data from the CSV to a data frame
 def store_from_csv(coin_list):
     updated_data_df_list = []
     for coin in coin_list:
@@ -75,6 +74,7 @@ def store_from_csv(coin_list):
     return updated_data_df_list
 
 
+# Comparing new data to old data to find data needed to be added to the database
 def compare_data(table_list, new_data_list):
     for outer_index in range(len(new_data_list)):
         for inner_index in range(len(new_data_list[outer_index].date)):
@@ -86,4 +86,11 @@ def compare_data(table_list, new_data_list):
     return new_data_list
 
 
+# Pushing updated database to GitHub
+# def pushToGitHub():
+#     # TODO: TESTING
+#     os.system("git commit -m 'Updating Database' db.sqlite3"
+#               "git checkout --patch Austin db.sqlite3")
+
+# ----------------------------------------------------------------------------------------------------------------------
 main()
