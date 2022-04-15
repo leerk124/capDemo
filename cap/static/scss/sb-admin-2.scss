@@ -1,12 +1,11 @@
 $theme-colors:(
-    // "secondary": #1f1d24,
-    // "dark":#221f26,
-    "primary":#0e1e3a,
-    "secondary": #091221,
+    "primary":#262626,
+    // "secondary": #091221,
     "dark":#04080f,
+    "secondary":#111111
 );
 
-$bg-img: url('img/capLogo.jpg');
+
 
 // Import Custom SB Admin 2 Variables (Overrides Default Bootstrap Variables)
 @import "variables.scss";
