@@ -6,7 +6,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,7 +31,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        {% include 'partialsLitecoinGraph/_sidebar.html' %}
+        {% include 'partialsBitcoin/_sidebar.html' %}
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -42,27 +41,28 @@
             <div id="content">
 
                 <!-- Topbar -->
-                {% include 'partialsLitecoinGraph/_topbar.html' %}
+                {% include 'partialsBitcoin/_topbar.html' %}
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h2 class = "liteCoinHeader" color="text">
-                        <img src="\static\img\litecoinColor.png" alt="logo" width="30" height="33"> 
-                        Litecoin
-                        <span style="font-size: 13px;"> LTC</span>
+                    <h2 class = "BitcoinHeader" color="text">
+                        <img src="\static\img\bitcoinColor.png" alt="logo" width="30" height="33"> 
+                        Bitcoin
+                        <span style="font-size: 13px;"> BTC</span>
                     </h2>
-
-                    <!-- Page Heading -->
-                    <center>
+                    {% comment %} <span style="font-size: 30px;">Bitcoin</span><span style="font-size: 15px;"> BTC</span> {% endcomment %}
+                    
+                    <!--GRAPHS LOCATION-->
+                        <center>
                         {%block content%}
                         {% endblock %}
-                    </center>
+                        </center>
                 </div>
                 <!-- End of Main Content -->
 
                 <!-- Footer -->
-                    {% include 'partialsLitecoinGraph/_footer.html' %}
+                    {% include 'partialsBitcoin/_footer.html' %}
                 <!-- End of Footer -->
 
             </div>

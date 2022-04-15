@@ -6,7 +6,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,7 +22,6 @@
 
     <!-- Custom styles for this template-->
     <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
-
 </head>
 
 <body id="page-top">
@@ -32,7 +30,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        {% include 'partialsLitecoinGraph/_sidebar.html' %}
+        {% include 'partialsTether/_sidebar.html' %}
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -42,15 +40,15 @@
             <div id="content">
 
                 <!-- Topbar -->
-                {% include 'partialsLitecoinGraph/_topbar.html' %}
+                {% include 'partialsTether/_topbar.html' %}
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h2 class = "liteCoinHeader" color="text">
-                        <img src="\static\img\litecoinColor.png" alt="logo" width="30" height="33"> 
-                        Litecoin
-                        <span style="font-size: 13px;"> LTC</span>
+                    <h2 class = "cardanoHeader" color="text">
+                        <img src="\static\img\tetherColor.png" alt="logo" width="30" height="33"> 
+                        Tether
+                        <span style="font-size: 13px;"> USDT</span>
                     </h2>
 
                     <!-- Page Heading -->
@@ -62,7 +60,7 @@
                 <!-- End of Main Content -->
 
                 <!-- Footer -->
-                    {% include 'partialsLitecoinGraph/_footer.html' %}
+                    {% include 'partialsTether/_footer.html' %}
                 <!-- End of Footer -->
 
             </div>

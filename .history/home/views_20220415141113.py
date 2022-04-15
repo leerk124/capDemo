@@ -75,17 +75,22 @@ def dogeHistory(requests):
 def ethereumHistory(requests):
     return render(requests, 'home/welcome.html')
 
+
 def heliumHistory(requests):
     return render(requests, 'home/welcome.html')
+
 
 def litecoinHistory(requests):
     return render(requests, 'home/welcome.html')
 
+
 def polkadotHistory(requests):
     return render(requests, 'home/welcome.html')
 
+
 def shibainuHistory(requests):
     return render(requests, 'home/welcome.html')
+
 
 def tetherHistory(requests):
     return render(requests, 'home/welcome.html')

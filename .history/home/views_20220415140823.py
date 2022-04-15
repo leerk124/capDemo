@@ -63,29 +63,3 @@ def tetherGraphs(requests):
 
 
 #HISTORY PAGES
-def bitcoinHistory(requests):
-    return render(requests, 'home/welcome.html')
-
-def cardanoHistory(requests):
-    return render(requests, 'home/welcome.html')
-
-def dogeHistory(requests):
-    return render(requests, 'home/welcome.html')
-
-def ethereumHistory(requests):
-    return render(requests, 'home/welcome.html')
-
-def heliumHistory(requests):
-    return render(requests, 'home/welcome.html')
-
-def litecoinHistory(requests):
-    return render(requests, 'home/welcome.html')
-
-def polkadotHistory(requests):
-    return render(requests, 'home/welcome.html')
-
-def shibainuHistory(requests):
-    return render(requests, 'home/welcome.html')
-
-def tetherHistory(requests):
-    return render(requests, 'home/welcome.html')
