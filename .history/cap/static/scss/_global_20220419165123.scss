@@ -44,6 +44,7 @@ p.semi-heading{
     border-right: 0;
     border-bottom: .3em solid transparent;
     border-left: .3em solid;
+
   }
 
   .dropdown-menu .dropdown-menu {
@@ -53,6 +54,10 @@ p.semi-heading{
 
   .dropdown-menu li {
     position: relative;
+    font-family: 'Lato', 'sans-serif';
+    // font-weight: 800;
+    font-size: 1px;
+    // color: rgb(255, 255, 255);
   }
 
   .nav-item .submenu {
@@ -68,13 +73,14 @@ p.semi-heading{
   }
 
   .dropdown-menu>li:hover {
-    background-color: #f1f1f1
+    background-color: #262626;
   }
 
   .dropdown-menu>li:hover>.submenu {
     display: block;
   }
 }
+
 
 
 
