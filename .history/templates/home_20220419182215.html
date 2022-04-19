@@ -47,20 +47,11 @@
                 <div class="container-fluid">
                         <center>
                             <h1 class="big-heading">Crypto Analytics Platform</h1>
-
                             <p class="semi-heading">View the latest historic crypto data, charts, and more.</p>
-                        <center>
-                            <!--Carousel-->
-                        <center>
-                            <div class= "container-fluid coin-slide">   
-                                {% comment %} <div class="overpic">
-                                    <img src="\static\img\capthumb.png" alt="caplogo with thumb" width="100" height="105">
-                                </div> {% endcomment %}
-                            </div>
-                                <div id="carouselSlides" class="carousel slide" data-ride="carousel">
+                    
+                            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        {% comment %} <h2>VIEW CHARTS</h2> {% endcomment %}
                                     <img src="\static\img\volume.png" alt="volume graph">
                                     </div>
                                     <div class="carousel-item">
@@ -71,8 +62,38 @@
                                     </div>
                                 </div>
                             </div>
-                        </section>
-                        </center>
+                
+
+                {% comment %} <section class="colored-section" id="testimonials">
+                    <div id="functionality-carousel" class="carousel slide" data-bs-ride="carousel" >
+                    <div class="carousel-inner">
+                        <div class="carousel-item active container-fluid"> <!--one of these classes must be marked as 'active'-->
+                        <h2 class="functionality-text">View Charts </h2>
+                            <img src="\static\img\volume.png" alt="volume graph">
+                        </div>
+                        <div class="carousel-item container-fluid"> 
+                        <h2 class="functionality-text">View Charts</h2>
+                            <img src="\static\img\candle1.png" alt="candlestick graph">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span> <!--aria hidden means make the screen reader skip over this-->
+                        <span class="visually-hidden">Previous</span> <!-- tells screen reader "PREVIOUS" instead of "carousel-control-prev-icon"-->
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    </div>
+                </section> {% endcomment %}
+                 </center>
+
+                    {% comment %} <h2>View Charts</h2>   
+                    <img src="\static\img\volume.png" alt="logo" width="500" height="300">
+                    <img src="\static\img\candle1.png" alt="logo" width="500" height="300">
+
+                    <h2>View History</h2>   
+                    <img src="\static\img\volume.png" alt="logo" width="500" height="300"> {% endcomment %}
 
                 
                     <!-- Page Heading -->

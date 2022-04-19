@@ -19,7 +19,6 @@ body {
   color: rgb(255, 255, 255);
 }
 
-
 //changed paragraph size for homepage
 p.semi-heading{
   font-size: 1.2rem;
@@ -69,7 +68,7 @@ p.semi-heading{
   }
 
   .dropdown-menu>li:hover {
-    background-color: #f1f1f1
+    background-color: green;
   }
 
   .dropdown-menu>li:hover>.submenu {
@@ -78,20 +77,19 @@ p.semi-heading{
 }
 
 
-// // Testing Overpic
-// .overpic {
-//   position: absolute;
-//   top: 15%;
-//   right: 67%;
-//   // left: 20%;
-//   opacity: 0.8;
-//   z-index: 2;
-// }
+// Testing Overpic
+.overpic {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  opacity: 0.5;
+  z-index: 2;
+}
 
-// .overpic img {
-//   width: 320px;
-//   height: 300px;
-// }
+.overpic img {
+  width: 250px;
+  height: 300px;
+}
 
 
 
