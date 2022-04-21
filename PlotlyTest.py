@@ -40,6 +40,9 @@ def graphs(data_frame_needed):
     graph_html_list.append(candleStick_graph.to_html(full_html=False, default_height=500, default_width=900))
     return graph_html_list
 
+def tableToHTML(data_frame_needed):
+    table_as_html = data_frame_needed.to_html
+    return table_as_html
 
 def main(coin):
     # Opening database
@@ -51,8 +54,16 @@ def main(coin):
     # Closing database
     database.close_database()
 
-    # TEST = input("Enter the coin you'd like to see")
+    # Finding table for wanted coin
     data_frame_needed = findTableNeeded(coin, jank_hash_table)
 
-    return graphs(data_frame_needed)
+    # Converting data to html for webpage
+    table_as_html = tableToHTML(data_frame_needed)
+    html_list = graphs(data_frame_needed)
 
+    html_list.append(table_as_html)
+
+    return html_list
+
+
+main('bitcoin')

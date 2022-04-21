@@ -15,7 +15,6 @@ class ReadData:
 
         # List of table names
         table_name_list = self.findTableNames()
-        print(table_name_list)
 
         for index in table_name_list:
             # Query to grab data needed
