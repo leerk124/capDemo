@@ -41,7 +41,17 @@ def graphs(data_frame_needed):
     return graph_html_list
 
 def tableToHTML(data_frame_needed):
-    table_as_html = data_frame_needed.to_html
+    data_frame = data_frame_needed
+    columns_to_be_formatted = ['open', 'high', 'low', 'close', 'adj_close']
+    data_frame.pop('name')
+
+    for column in columns_to_be_formatted:
+        data_frame.loc[:, column] = data_frame[column].map('{:.2f}'.format)
+
+    data_frame = data_frame.sort_values(by=['date'], ascending=False)
+    data_frame = data_frame.reset_index(drop=True)
+    table_as_html = data_frame.to_html
+
     return table_as_html
 
 def main(coin):
@@ -64,6 +74,3 @@ def main(coin):
     html_list.append(table_as_html)
 
     return html_list
-
-
-main('bitcoin')

@@ -64,28 +64,82 @@ def tetherGraphs(requests):
 
 #HISTORY PAGES
 def bitcoinHistory(requests):
-    return render(requests, 'home/bitcoinHistory.html')
+    html_list = PlotlyTest.main('bitcoin')
+    context = {
+        'candleStick_graph': html_list[0],
+        'volume': html_list[1],
+        'table': html_list[2]
+    }
+    return render(requests, 'home/bitcoinHistory.html', context)
 
 def cardanoHistory(requests):
-    return render(requests, 'home/cardanoHistory.html')
+    html_list = PlotlyTest.main('cardano')
+    context = {
+        'candleStick_graph': html_list[0],
+        'volume': html_list[1],
+        'table': html_list[2]
+    }
+    return render(requests, 'home/cardanoHistory.html', context)
 
 def dogeHistory(requests):
-    return render(requests, 'home/dogeHistory.html')
+    html_list = PlotlyTest.main('doge')
+    context = {
+        'candleStick_graph': html_list[0],
+        'volume': html_list[1],
+        'table': html_list[2]
+    }
+    return render(requests, 'home/dogeHistory.html', context)
 
 def ethereumHistory(requests):
-    return render(requests, 'home/ethereumHistory.html')
+    html_list = PlotlyTest.main('ethereum')
+    context = {
+        'candleStick_graph': html_list[0],
+        'volume': html_list[1],
+        'table': html_list[2]
+    }
+    return render(requests, 'home/ethereumHistory.html', context)
 
 def heliumHistory(requests):
-    return render(requests, 'home/heliumHistory.html')
+    html_list = PlotlyTest.main('helium')
+    context = {
+        'candleStick_graph': html_list[0],
+        'volume': html_list[1],
+        'table': html_list[2]
+    }
+    return render(requests, 'home/heliumHistory.html', context)
 
 def litecoinHistory(requests):
-    return render(requests, 'home/litecoinHistory.html')
+    html_list = PlotlyTest.main('litecoin')
+    context = {
+        'candleStick_graph': html_list[0],
+        'volume': html_list[1],
+        'table': html_list[2]
+    }
+    return render(requests, 'home/litecoinHistory.html', context)
 
 def polkadotHistory(requests):
-    return render(requests, 'home/polkadotHistory.html')
+    html_list = PlotlyTest.main('polkadot')
+    context = {
+        'candleStick_graph': html_list[0],
+        'volume': html_list[1],
+        'table': html_list[2]
+    }
+    return render(requests, 'home/polkadotHistory.html', context)
 
 def shibainuHistory(requests):
-    return render(requests, 'home/shibainuHistory.html')
+    html_list = PlotlyTest.main('shibainu')
+    context = {
+        'candleStick_graph': html_list[0],
+        'volume': html_list[1],
+        'table': html_list[2]
+    }
+    return render(requests, 'home/shibainuHistory.html', context)
 
 def tetherHistory(requests):
-    return render(requests, 'home/tetherHistory.html')
+    html_list = PlotlyTest.main('tether')
+    context = {
+        'candleStick_graph': html_list[0],
+        'volume': html_list[1],
+        'table': html_list[2]
+    }
+    return render(requests, 'home/tetherHistory.html', context)
