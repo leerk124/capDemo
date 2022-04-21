@@ -1,0 +1,11 @@
+{% extends 'bitcoinGraphs.html' %}
+{% load static %}
+{% block content %}
+{% if candleStick_Graph %}
+    <center><h3>Volume</h3></center>
+    {{ candleStick_Graph|safe }}
+    {{ volume|safe }}
+    {% else %}
+    <p>No graph here</p>
+    {% endif %}
+{% endblock %}
