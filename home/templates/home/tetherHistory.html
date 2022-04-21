@@ -1,4 +1,9 @@
 {% extends 'tetherHistory.html' %}
 {% load static %}
 {% block content %}
+{% if table %}
+    {{table|safe}}
+    {% else %}
+    <p>Table Could Not Be Found</p>
+    {% endif%}
 {% endblock %}
