@@ -1,0 +1,113 @@
+{% load static %}
+<!-- {% load staticfiles %} -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CAP</title>
+    <link rel="shortcut icon" type="image/png" href ="static/img/capLogo2.png">
+
+
+    <!-- Custom fonts for this template-->
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        {% include 'partialsBitcoinHistory/_sidebar.html' %}
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                {% include 'partialsBitcoinHistory/_topbar.html' %}
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <h2 class = "BitcoinHeader" color="text">
+                        <img src="\static\img\bitcoinColor.png" alt="logo" width="30" height="33"> 
+                        Bitcoin
+                        <span style="font-size: 13px;"> BTC</span>
+                    </h2>
+
+                {% comment %} <center>
+            <div class="history">
+            <h2>History</h2>
+            <div class="history-row">
+                <img class="" src="images/programming.png" alt="history-img">
+                <p class="histParagraph">Bitcoin was first introduced in 2008 as a decentralized currency without the need for a central bank or any intermediaries. It can be sent to and from users via the bitcoin network, a peer-to-peer network in which transactions are authenticated by nodes and recorded on a blockchain.</p>
+                <p class="histParagraph">In 2009, Bitcoin was first used after it was released as open-source software, when Nakamoto mined the starting block of the blockchain. This is referred to as the Genesis Block, and it contained the first 50 Bitcoins ever created. From there on, Bitcoin continued to be mined by other early contributors until 2010. That’s when programmer Laszlo Hanyecz made the first known commercial transaction using the cryptocurrency through the purchase of two Papa John’s pizzas for 10,000 Bitcoins. (Fun fact: That amount of Bitcoin is worth over $300 million as of this writing).</p>
+                <p class="histParagraph">Since then, Bitcoin has been traded hundreds of millions of times, with the earliest major transactions occurring in black markets. The largest of these was Silk Road, which traded nearly 10 million Bitcoins during its existence.</p>
+                <p class="histParagraph">Because of black market use of cryptocurrency, regulation emerged from several countries. The People’s Bank of China initiated the most impactful regulations with three separate actions:</p>
+                <p class="histParagraph">
+            </div>
+
+                </center> {% endcomment %}
+                    
+                    
+                    <!--Historic Tables Location-->
+                        {%block content%}
+                        {% endblock %}
+                </div>
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                    {% include 'partialsBitcoinHistory/_footer.html' %}
+                <!-- End of Footer -->
+
+            </div>
+            <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+
+        <!-- Bootstrap core JavaScript-->
+        <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
+
+        <!-- Page level plugins -->
+        <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script>
+
+        <!-- Page level custom scripts -->
+        <script src="{% static 'js/demo/chart-area-demo.js' %}"></script>
+        <script src="{% static 'js/demo/chart-pie-demo.js' %}"></script>
+
+</body>
+
+</html>
