@@ -13,8 +13,9 @@ def findTableNeeded(coin, jank_hash_table):
     return coin_wanted
 
 
-def graphs(data_frame_needed):
+def graphs(data_frame_needed, coin):
     graph_html_list = []
+
     # Candlestick Graph
     candleStick_graph = graph_object.Figure(data=[graph_object.Candlestick(x=data_frame_needed['date'],
                                                                            open=data_frame_needed['open'],
@@ -25,14 +26,21 @@ def graphs(data_frame_needed):
 
     # Volume Histogram
     volume_graph = pltly.histogram(data_frame_needed,
-                                   x = 'date', y='volume',
-                                   title='Volume of Coin',
+                                   x='date', y='volume',
+                                   title='Amount of ' + coin.capitalize() + ' In Circulation',
                                    labels={'x': 'Date', 'y': 'Volume'})
 
     # Updating plots here
     # candleStick_graph.update_layout(plot_bgcolor='black')
-    candleStick_graph.update_layout(template='plotly_dark')
-    volume_graph.update_layout(template='plotly_dark')
+    candleStick_graph.update_layout(template='plotly_dark',
+                                    title='Price History of ' + coin.capitalize(),
+                                    xaxis_title_text='Date',
+                                    yaxis_title_text='Price ($)')
+
+    volume_graph.update_layout(template='plotly_dark',
+                               bargap=0.1,
+                               xaxis_title_text='Date',
+                               yaxis_title_text='Volume')
 
 
 
@@ -43,14 +51,24 @@ def graphs(data_frame_needed):
 def tableToHTML(data_frame_needed):
     data_frame = data_frame_needed
     columns_to_be_formatted = ['open', 'high', 'low', 'close', 'adj_close']
-    data_frame.pop('name')
+    data_frame.pop('name')  # Removing name column because it is not needed for printing
 
+    # Formatting numbers to two decimal places
     for column in columns_to_be_formatted:
         data_frame.loc[:, column] = data_frame[column].map('{:.2f}'.format)
 
-    data_frame = data_frame.sort_values(by=['date'], ascending=False)
-    data_frame = data_frame.reset_index(drop=True)
-    table_as_html = data_frame.to_html
+    # Converting entire dataframe to type string
+    data_frame = data_frame.astype(str)
+
+    # Trying to format text in data frame for better table
+    for column in data_frame:
+        for index in range(len(column)):
+            data_frame[column][index] = '%.10000s' % (data_frame[column][index])
+
+
+    data_frame = data_frame.sort_values(by=['date'], ascending=False)   # Sorting tables by newest date
+    data_frame = data_frame.reset_index(drop=True)  # Resetting the index of the data frame to be in new order
+    table_as_html = data_frame.to_html      # Getting html version of data frame to print on webpage
 
     return table_as_html
 
@@ -69,7 +87,7 @@ def main(coin):
 
     # Converting data to html for webpage
     table_as_html = tableToHTML(data_frame_needed)
-    html_list = graphs(data_frame_needed)
+    html_list = graphs(data_frame_needed, coin)
 
     html_list.append(table_as_html)
 

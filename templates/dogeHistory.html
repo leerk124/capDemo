@@ -80,7 +80,22 @@
                         <center>
                             <h2>Historical Data</h2>
                         </center>
-
+                        <!--Crypto Terms-->
+                    <div class="row">
+                        <div class="col-sm-5 mx-auto">
+                            <div class="card">
+                                <div class="card-body">
+                                    <center><h5 class="card-title">Crypto Terms</h5></center>
+                                        <b><u>Open:</u></b> The price at which a cryptocurrency opens at a time period.
+                                            <br><b><u>Close:</u></b> The price at which a cryptocurrency closes at a time period.
+                                            <br><b><u>Adjusted Close:</u></b> The closing price after adjustments for all applicable splits and dividend distributions.
+                                            <br><b><u>High:</u></b> The highest price of a cryptocurrency of the previous session of 24 hours.
+                                            <br><b><u>Low:</u></b> The lowest price of a cryptocurrency of the previous session of 24 hours.
+                                            <br><b><u>Volume:</u></b> The number of units traded in a market during a given time. 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                         <center>
                             <div class="history-container">
                                 {%block content%}
@@ -107,26 +122,7 @@
             <i class="fas fa-angle-up"></i>
         </a>
 
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
         <!-- Bootstrap core JavaScript-->
         <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
         <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
