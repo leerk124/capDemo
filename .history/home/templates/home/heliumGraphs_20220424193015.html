@@ -1,0 +1,66 @@
+{% extends 'heliumGraphs.html' %}
+{% load static %}
+{% block content %}
+
+{% if candleStick_Graph%}
+    <div class="row">
+        <div class="col-sm-5 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <center><h5 class="card-title">Histogram</h5></center>
+                    <ul style="list-style: url('/static/img/diamond.png')">
+                        <li>The histogram below will provide a visualization of the
+                        amount of Helium in circulation over time since the coin became available.</li>
+                        <li>The y-axis represents the volume of the coin.</li>
+                        <li>The x-axis represents the time frame. As you zoom in you will see the x-axis change
+                        from year / month / date.</li>
+                        <li>This graph can help you understand the amount of Helium being mined over time. We can
+                        use this information to watch trends and compare the volume of coin with the price of
+                        the coin.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <center>{{ candleStick_Graph|safe }}</center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+   <div class="row">
+        <div class="col-sm-5 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <center><h5 class="card-title">Candlestick Graph</h5></center>
+                    <b><u>Brief History: </u></b> The candlestick graph was created in the 1700s by Japanese rice
+                    farmers to analyze market prices of rice. It was adopted by financial markets, such as Wall Street
+                    as a global price chart.
+                    <br><b><u>Color of The Candlesticks: </u></b> The color of each candlestick in the graph represents
+                    the movement of the price for the given stock / cryptocurrency with green meaning a positive
+                    movement and red meaning a negative movement.
+                    <br><b><u>Time Interval: </u></b> This graph has a time interval of year / month / and day depending
+                    on how far you are zoomed in. As you zoom in you will see smaller time intervals and as you zoom out
+                    the time intervals will grow.
+                    <br><b>Open / Close: </b> Each candlestick will show the open and close price of the coin. When the
+                    candlestick is green the closing price will be on top and the open price will be on the bottom.
+                    Conversely, when the candlestick is red the opening price will be on top and the close price on the
+                    bottom. Carefully analyzing the graphs we can also see that the opening price of one day's
+                    candlestick will align with the closing price of the prior day.
+                    <br><b><u>High / Low: </u></b> The wick of each candlestick will show the highest and lowest price
+                    of a coin during a time interval. The top of the wick represents the highest price the coin was
+                    traded for during that time interval and the bottom of the wick represents the lowest price during
+                    that time interval.
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ volume|safe }}
+
+    {% else %}
+    <p>No graph here</p>
+    {% endif %}
+{% endblock %}
