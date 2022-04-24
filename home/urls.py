@@ -459,7 +459,7 @@ urlpatterns = [
     path('tetherHistory/heliumHistory/',RedirectView.as_view(url='http://127.0.0.1:8000/heliumHistory/')),
     path('tetherHistory/litecoinHistory/',RedirectView.as_view(url='http://127.0.0.1:8000/litecoinHistory/')),
     path('tetherHistory/polkadotHistory/',RedirectView.as_view(url='http://127.0.0.1:8000/polkadotHistory/')),
-    path('tetherGraphs/shibainuHistory/',RedirectView.as_view(url='http://127.0.0.1:8000/shibainuHistory/')),
+    path('tetherHistory/shibainuHistory/',RedirectView.as_view(url='http://127.0.0.1:8000/shibainuHistory/')),
     path('tetherHistory/tetherHistory/', RedirectView.as_view(url='http://127.0.0.1:8000/tetherHistory/')),
     path('tetherHistory/home/', RedirectView.as_view(url='http://127.0.0.1:8000/'))
 ]
