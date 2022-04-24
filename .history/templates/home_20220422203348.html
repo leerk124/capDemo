@@ -61,15 +61,16 @@
                     <div class="View">   
                         <p>View the latest crypto</p>
                         <b>
-                            <div class="innerView">
-                                coins<br/>  
-                                prices<br/>
-                                charts<br/>
-                                tables<br/>
+                        <div class="innerView">
+                            coins<br/>  
+                            prices<br/>
+                            charts<br/>
+                            tables<br/>
                             </div>
                         </b>
-                        .
+                        
                     </div>
+
 
                         <!--Carousel-->
                         <center>
@@ -103,6 +104,9 @@
                                 <img src="\static\img\cryptograph.png" alt="cryptograph"  width="150" height="150">
                                 <h4>Analyze Volume & Candlestick Graphs</h4>
                                 <p>Graphs are updated daily and allow users to examine the sum of volume, open/close periods, and highs/lows per coin.</p>
+
+
+                                    
                             </div>
 
                             <div class="col-lg-4">
@@ -112,12 +116,19 @@
                             </div>
                         </div>
                     </center>
+                            {% comment %} <ul>
+                                <li>Access to popular cryptocurrencies</li>
+                                <p>Ranging from nine different coins<p>
+                                <li>Analyze volume and candlestick graphs</li>
+                                <li>View historical data</li>
+                                <li>Learn the origins of specific coins</li>
+                            </ul> {% endcomment %}
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800"> </h1>
+                        
                     </div>
-                    
                     <div class="row">
                         {%block content%}
                         {% endblock %}

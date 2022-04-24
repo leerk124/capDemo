@@ -6,7 +6,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,7 +33,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        {% include 'partialsShibaInuHistory/_sidebar.html' %}
+        {% include 'partialsBitcoinHistory/_sidebar.html' %}
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -44,17 +43,18 @@
             <div id="content">
 
                 <!-- Topbar -->
-                {% include 'partialsShibaInuHistory/_topbar.html' %}
+                {% include 'partialsBitcoinHistory/_topbar.html' %}
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h2 class = "shibaInuHeader" color="text">
-                        <img src="\static\img\shibainuColor.png" alt="logo" width="30" height="33"> 
-                        Shiba Inu
-                        <span style="font-size: 13px;"> SHIB</span>
+                    <h2 class = "BitcoinHeader" color="text">
+                        <img src="\static\img\bitcoinColor.png" alt="logo" width="30" height="33"> 
+                        Bitcoin
+                        <span style="font-size: 13px;"> BTC</span>
                     </h2>
-
+                    
+                    
                     <!--Historic Tables Location-->
                     <div class = "container-fluid">
                     <!--Crypto Terms-->
@@ -63,12 +63,12 @@
                             <div class="card">
                                 <div class="card-body">
                                     <center><h5 class="card-title">Crypto Terms</h5></center>
-                                            <b style="color:white;">OPEN:</b> The price at which a cryptocurrency opens at a time period.
-                                            <br><b style="color:white;">CLOSE:</b> The price at which a cryptocurrency closes at a time period.
-                                            <br><b style="color:white;">ADJUSTED CLOSE:</b> The closing price after adjustments for all applicable splits and dividend distributions.
-                                            <br><b style="color:white;">HIGH:</b> The highest price of a cryptocurrency of the previous session of 24 hours.
-                                            <br><b style="color:white;">LOW:</b> The lowest price of a cryptocurrency of the previous session of 24 hours.
-                                            <br><b style="color:white;">VOLUME:</b> The number of units traded in a market during a given time. 
+                                            <p style="color:blue;"><b><u>OPEN:</u></b></p> The price at which a cryptocurrency opens at a time period.
+                                            <br><b><u>CLOSE:</u></b> The price at which a cryptocurrency closes at a time period.
+                                            <br><b><u>ADJUSTED CLOSE:</u></b> The closing price after adjustments for all applicable splits and dividend distributions.
+                                            <br><b><u>HIGH:</u></b> The highest price of a cryptocurrency of the previous session of 24 hours.
+                                            <br><b><u>LOW:</u></b> The lowest price of a cryptocurrency of the previous session of 24 hours.
+                                            <br><b><u>VOLUME:</u></b> The number of units traded in a market during a given time. 
                                 </div>
                             </div>
                         </div>
@@ -87,11 +87,10 @@
                                 {% endblock %}
                             </div>
                         </center>
-                </div>
                 <!-- End of Main Content -->
 
                 <!-- Footer -->
-                    {% include 'partialsShibaInuHistory/_footer.html' %}
+                    {% include 'partialsBitcoinHistory/_footer.html' %}
                 <!-- End of Footer -->
 
             </div>
@@ -105,26 +104,7 @@
             <i class="fas fa-angle-up"></i>
         </a>
 
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
         <!-- Bootstrap core JavaScript-->
         <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
         <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
